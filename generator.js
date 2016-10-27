@@ -1,6 +1,6 @@
 const random = require("geojson-random");
-const randomName = require("random-name");
 const fs = require("fs");
+
 const breaker = require("./breaker");
 
 const convertDate = (date) => {
@@ -26,14 +26,12 @@ const periodize = (startDate, endDate, count) => {
 }
 
 const generatePolygons = (count, bbox, startDate, endDate) => {
-  var name = randomName.place();
   var polygons = [];
   var periods = periodize(startDate, endDate, count);
 
   for (let i = 0; i < count; i++) {
-    // JSON.parse
     let polygon = random.polygon(1, 20, 4, bbox).features[0];
-    polygon.properties.name = name;
+    polygon.properties.id = Math.round(Math.random() * 1000);
     polygon.properties.start_date = convertDate(periods[i][0]);
     polygon.properties.end_date = convertDate(periods[i][1]);
     polygons.push(polygon);
@@ -45,7 +43,7 @@ const generatePolygons = (count, bbox, startDate, endDate) => {
 module.exports = function() {
   var polygons = generatePolygons(2, [68.0, 44.0, 92.0, 35.0], new Date("10/13/500"), new Date("2/22/1000"));
   polygons.forEach(element => {
-    fs.writeFileSync(`${element.properties.name}.geojson`, JSON.stringify(element));
+    fs.writeFileSync(`${element.properties.id}.geojson`, JSON.stringify(element));
     console.log("Generated");
   });
 }

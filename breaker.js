@@ -1,4 +1,4 @@
-function breaker(number, count, pieces, randomMax, randomMin) {
+module.exports = function(number, count, pieces, randomMax, randomMin) {
   if (!randomMax) randomMax = 86400000 * 365 * 9;
   if (!randomMin) randomMin = 86400000 * 365 * 2;
 
@@ -24,4 +24,3 @@ function breaker(number, count, pieces, randomMax, randomMin) {
   }
 }
 
-module.exports = breaker;
