@@ -1,3 +1,5 @@
+// Patched version of this tool: https://github.com/mapbox/geojson-random
+
 module.exports = function() {
     throw new Error('call .point() or .polygon() instead');
 };
