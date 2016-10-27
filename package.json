@@ -1,0 +1,14 @@
+{
+  "name": "polygon-generator",
+  "version": "1.0.0",
+  "description": "Genereate polygons in given bounding box with given periods",
+  "main": "generator.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soal/polygon-generator.git"
+  },
+  "homepage": "https://github.com/soal/polygon-generator#readme",
+  "dependencies": {
+    "geojson-extent": "^0.3.2"
+  }
+}
