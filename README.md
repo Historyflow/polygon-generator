@@ -6,13 +6,7 @@ Required Node.js 6+
 
 ```bash
 git clone https://github.com/soal/polygon-generator.git
-```
-
-```bash
 cd polygon-generator
-```
-
-```bash
 npm install
 ```
 
