@@ -8,7 +8,7 @@ Required Node.js 6+
 
 `cd polygon-generator`
 
-`npm intall`
+`npm install`
 
 ## Usage
 
