@@ -4,7 +4,7 @@ Generate random polygons with given periods
 ## Installation
 Required Node.js 6+
 
-`git clone git@github.com:soal/polygon-generator.git`
+`git clone https://github.com/soal/polygon-generator.git`
 
 `cd polygon-generator`
 
